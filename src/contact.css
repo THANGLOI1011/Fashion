@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+.contact-container{
+    padding: 30px 40px ;
+    width: 100%;
+    background-color: #f6f6f6;
+
+}
+.contact-contant{
+    width: 100%;
+    display: flex;
+}
+.contact-contant h2{
+    text-transform: uppercase;
+    font-size: 42px;
+    color: #010f1c;
+    margin-left: 110px;
+    font-weight: 600;
+    margin-top: 120px;
+}
+.contact-form{
+    margin-top: 30px;
+    padding: 20px 30px;
+    background-color: #fff;
+    margin-left: 90px;
+    width: 40%;
+    margin-right: 90px;
+    border-radius:10px ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-form form input{
+    padding: 10px 30px ;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    background: #f6f6f6;
+    width: 100%;
+    
+}
+.contact-form form textarea{
+    padding: 10px 30px ;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background: #f6f6f6;
+    width: 100%;
+    
+}
+.contact-form form button{
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 0px;
+    border: none;
+    border-radius: 7px;
+    background: none;
+    outline: none;
+    background-color: #D8BA6F;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.contact-form-item p {
+    font-size: 14px;
+    color: #010f1c;
+    font-weight: 550;
+    padding: 20px 0px 10px 0px;
+}
+.contact-info{
+    width: 60%;
+    background-color: #f6f6f6;
+}
+.contact-info p{
+    font-size: 16px;
+    max-width: 700px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-left: 60px;
+    padding: 50px;
+
+}

@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.admin-panel {
+    padding: 20px;
+    display: flex;
+  }
+  
+  .admin-panel-all h1 {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .admin-panel__header{
+    width: 30%;
+    margin-right: 20px;
+  }
+  .admin-panel__header h2{
+    margin-bottom: 5px;
+  }
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 25px;
+  }
+  .product-list-container{
+    display: grid;
+    width: 70%;
+  }
+  .product-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 23%;
+    text-align: center;
+  }
+  
+  .product-item img {
+    width: 60%;
+    height: auto;
+  }
+  
+  .add-product, .edit-product {
+    margin-top: 20px;
+  }
+  
+  .add-product input, .edit-product input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .add-product button {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff;
+    background-color: green;
+    border: none;
+    border-radius:3px;
+  }
+  #delete{
+    padding: 10px;
+    width: 70px;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius:3px;
+  }
+  #edit{
+    padding: 10px;
+    width: 70px;
+    margin-right: 20px;
+    border: none;
+    border-radius:3px;
+    background-color: blue;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 20px;
+  }
+#update{
+    padding: 10px;
+    width: 150px;
+    margin-right: 20px;
+    border: none;
+    border-radius:3px;
+    background-color: blue;
+    cursor: pointer;
+    color: #fff;
+}
+#slogan{
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+#price{
+    color: #D8BA6F;
+    font-size: 16px;
+    font-weight: 550;
+
+}
+#quantity{
+  padding: 20px 0;
+}
+.product-list-info p {
+  padding: 10px 0;
+}
+#create{
+  padding: 10px 20px 10px 20px;
+  color: #fff;
+  background-color: green;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+  

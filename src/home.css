@@ -140,6 +140,7 @@
 }
 .product{
     padding: 30px 50px;
+    background-color: #f5f5f5;
 }
 .product h2{
     font-size: 32px;
@@ -158,11 +159,12 @@
     padding: 10px 20px ;
     overflow: hidden;
     width: 250px;
-    border: 1px solid #d0cfcf;
     margin-bottom: 50px;
     transition: 0.5s;
     cursor: pointer;
     position: relative;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1)
 
 }
 .box:hover{
@@ -203,9 +205,7 @@
     color: #fff;
     background-color: #C7AB62;
 }
-.detail{
-    margin-top: 10px;
-}
+
 .detail p{
     color: #9a9a9a;
     font-size: 14px;
@@ -298,11 +298,9 @@
     margin-top: 30px;
     padding: 30px 40px;
     width: 100%;
-    height: 120%;
+    height: 100%;
     position: fixed;
-    margin-top: -12%;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.24);
 }
 .detail-container{
     background-color: #fff;
@@ -326,12 +324,8 @@
 .productsbox{
     display: flex;
     max-width: 100%;
-    padding: 20px 30px;
-    margin-top: 20px;
-}
-.detail-info{
-    margin-left: 30px;
-    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
 }
 .detail-info button{
     margin-top: 30px;

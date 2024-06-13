@@ -10,6 +10,7 @@ const AdminPanel = () => {
   const [editProduct, setEditProduct] = useState(null);
   const [totalProductsCount, setTotalProductsCount] = useState(0);
   const [showAddProductForm, setShowAddProductForm] = useState(false);
+  const [showTransactionHistory, setShowTransactionHistory] = useState(false);
 
   useEffect(() => {
     const fetchTransactionHistory = async () => {
@@ -118,10 +119,19 @@ const AdminPanel = () => {
   const handleCreateButtonClick = () => {
     setShowAddProductForm(true);
   };
+
+  const toggleTransactionHistory = () => {
+    setShowTransactionHistory(!showTransactionHistory);
+  };
+
   return (
     <div className='admin-panel-all'>
       <h1>Admin Dashboard</h1>
-      <div className="transaction-history-container">
+      <button onClick={toggleTransactionHistory}>
+        {showTransactionHistory ? 'Hide Transaction History' : 'Show Transaction History'}
+      </button>
+      {showTransactionHistory && (
+        <div className="transaction-history-container">
           <h2>Transaction History</h2>
           <div className="transaction-list">
             {transactionHistory.map((order) => (
@@ -136,6 +146,7 @@ const AdminPanel = () => {
             ))}
           </div>
         </div>
+      )}
       <div className="admin-panel">
         <div className="product-management-container">
           <h2>Product Management</h2>
@@ -143,21 +154,7 @@ const AdminPanel = () => {
             <h3>Products</h3>
             <p>Total Products: {totalProductsCount}</p>
           </div>
-          <div className="product-list">
-            {products.map((product) => (
-              <div key={product.id} className="product-item">
-                <img src={product.Img} alt={product.Title} />
-                <h3>{product.Title}</h3>
-                <p>{product.Cat}</p>
-                <p id='price'>${product.Price}</p>
-                <p id='slogan'>{product.slogan}</p>
-                <p>Quantity: {product.quantity}</p>
-                <p>Created At: {new Date(product.created_at).toLocaleString()}</p>
-                <button id='edit' onClick={() => setEditProduct(product)}>Edit</button>
-                <button id='delete' onClick={() => handleDeleteProduct(product.id)}>Delete</button>
-              </div>
-            ))}
-          </div>
+          
           {showAddProductForm && (
             <div className="add-product">
               {newProducts.map((product, index) => (
@@ -248,6 +245,21 @@ const AdminPanel = () => {
               <button id='update' onClick={handleEditProduct}>Update Product</button>
             </div>
           )}
+          <div className="product-list">
+            {products.map((product) => (
+              <div key={product.id} className="product-item">
+                <img src={product.Img} alt={product.Title} />
+                <h3>{product.Title}</h3>
+                <p>{product.Cat}</p>
+                <p id='price'>${product.Price}</p>
+                <p id='slogan'>{product.slogan}</p>
+                <p>Quantity: {product.quantity}</p>
+                <p>Created At: {new Date(product.created_at).toLocaleString()}</p>
+                <button id='edit' onClick={() => setEditProduct(product)}>Edit</button>
+                <button id='delete' onClick={() => handleDeleteProduct(product.id)}>Delete</button>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

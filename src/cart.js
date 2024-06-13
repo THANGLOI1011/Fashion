@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './cart.css';
 import { FaCircleCheck } from "react-icons/fa6";
 import db from './firebase';
+import './reponsive.css'
 import { ref, push } from 'firebase/database';
 
 const Cart = ({ cart, setCart }) => {
@@ -183,7 +184,7 @@ const Cart = ({ cart, setCart }) => {
                 </div>
                 <div className='form-group'>
                   <label>Payment Method</label>
-                  <div>
+                  <div className='payment'>
                     <label>
                       <input
                         type="radio"

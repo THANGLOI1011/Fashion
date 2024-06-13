@@ -94,8 +94,8 @@
     background: none;
     font-size: 22px;
     color: #010f1c;
-    width: 50px;
-    margin-left: 20px;
+    width: 100%;
+    text-align: center;
 
 }
 #subtotal{
@@ -219,7 +219,6 @@
 }
 .cart-contant-after{
     width: 100%;
-    border: 0.5px solid #f1f1f1;
     padding: 0px;
 }
 .form-payment{
@@ -251,6 +250,7 @@
 .cart-item-after{
     padding: 0px;
     margin: 0px;
+    border: 0.5px solid #f1f1f1;
 }
 .cart-contant-after-info{
     padding: 50px;
@@ -279,4 +279,11 @@
 }
 .order-item p{
     padding: 0px 5px 0px 5px;
+}
+.payment{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
 }

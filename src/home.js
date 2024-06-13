@@ -12,6 +12,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { AiOutlineHeart,AiOutlineClose } from "react-icons/ai";
 import { ref, get, child } from 'firebase/database';
 import db from './firebase';
+import './reponsive.css'
 
 
 const Home = ({detail,view,close,setClose,addtocart}) => {
@@ -121,18 +122,7 @@ const Home = ({detail,view,close,setClose,addtocart}) => {
                     </div>
                     </div>
                  </a>
-                 {/* san pham 5 */}
-                 <a className='click-product' href='/product'>
-            <div className='box-product'>
-                    <div className='img-box-product'>
-                        <img src='./img/sp6.png' alt='mobile'></img>
-                    </div>
-                    <div className='detail-product'>
-                        <p>93 product</p>
-                    </div>
                 </div>
-                 </a>
-            </div>
         </div>
         <div className='about'>
             <div className='about-container'>
@@ -185,8 +175,8 @@ const Home = ({detail,view,close,setClose,addtocart}) => {
             {
                 Homeproduct.map((curElm) => {
                     return(
-                        
-                        <div className='box' key={curElm.id}> 
+                        <div className='box-product-container'>
+                            <div className='box' key={curElm.id}> 
                             <div className='img-box'>
                                 <img src={curElm.Img} alt={curElm.Title}></img>
                             </div>
@@ -207,6 +197,7 @@ const Home = ({detail,view,close,setClose,addtocart}) => {
                                 <h3>{curElm.Title}</h3>
                                 <h4>${curElm.Price}</h4>
                             </div>
+                        </div>
                         </div>   
                     )
                 })

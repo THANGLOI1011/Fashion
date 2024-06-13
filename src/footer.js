@@ -5,6 +5,7 @@ import { BiLogoYoutube } from "react-icons/bi";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaPhone } from "react-icons/fa6";
 import './footer.css'
+import './reponsive.css'
 
 const Footer = () => {
   return (

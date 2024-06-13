@@ -29,8 +29,8 @@
     outline: none;
     padding: 4px 18px;
     cursor: pointer;
-    color: #fff;
-    background-color: #d8ba6f;
+    color: #c7ab62;
+    background-color: transparent;
     border: none;
     position: absolute;
     margin-right: 2px;
@@ -47,12 +47,6 @@
     position: relative;
     display: flex;
     align-items: center;
-  }
-  
-  .search_box button:hover {
-    background-color: #c7ab62;
-    color: #fff;
-    transition: 0.7s;
   }
   
   .logo {

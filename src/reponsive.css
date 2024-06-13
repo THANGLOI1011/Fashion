@@ -48,13 +48,13 @@
         height: 30vh !important;
     }
     .link-shopnow{
-        padding: 10px 20px !important;
+        padding: 10px 15px !important;
         font-size: 10px !important;
     }
     .arrow{
-        font-size: 10px;
-        right: 7px !important;
-        top: 11px !important;
+        font-size: 9px !important;
+        right: 4px !important;
+        top: 13px !important;
         margin-top: 0px !important;
     }
     .container-product{
@@ -118,7 +118,7 @@
         margin-bottom: 10px !important;
     }
     .footer-detail p{
-        font-size: 14px !important;
+        font-size: 12px !important;
     }
     .footer-info ul li{
         font-size: 12px !important;
@@ -127,7 +127,19 @@
         width: 120px !important;
     }
     .footer-info h3{
-        font-size: 24px !important;
+        font-size: 18px !important;
+    }
+    .footer-contact h3{
+        font-size: 18px !important;
+    }
+    .footer-newsletter h3{
+        font-size: 18px !important;
+    }
+    .footer-contact ul li{
+        font-size: 12px !important;
+    }
+    .footer-newsletter ul li{
+        font-size: 12px !important;
     }
     .footer-detail p{
         width: 100% !important;
@@ -302,7 +314,7 @@
         margin-bottom: 20px !important;
     }
     .detail-info button{
-        width: 100px !important;
+        width: 100% !important;
         font-size: 12px !important;
         padding: 10px !important;
     }
@@ -426,5 +438,8 @@
     }
     .contact-info{
         width: 100% !important;
+    }
+    .buynow{
+        margin-right: 10px !important;
     }
 }

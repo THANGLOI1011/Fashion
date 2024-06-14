@@ -90,6 +90,7 @@
     }
     .about-detail h3{
         font-size: 14px !important;
+        width: 150px;
     }
     .about-detail p{
         font-size: 10px !important;
@@ -441,5 +442,43 @@
     }
     .buynow{
         margin-right: 10px !important;
+    }
+    .product-type h2{
+        font-size: 18px !important;
+        margin: 0 !important;
+    }
+    .view-more{
+        margin-top: 20px !important;
+    }
+    .view-more button{
+        font-size: 12px !important;
+        padding:10px 20px !important;
+    }
+    .abouts{
+        margin-right: 20px !important;
+        margin-left: 20px !important;
+    }
+    .abouts-container-info h2{
+        font-size: 18px !important;
+    }
+    .about-container-title p{
+        font-size: 16px !important;
+        margin-top:30px !important;
+        margin-bottom: 30px !important;
+    }
+    .abouts-container-info p, .abouts-container-customer p{
+        padding: 20px 30px !important;
+        font-size: 14px !important;
+    }
+    .abouts-container-customer h2{
+        font-size: 18px !important;
+        margin-top: 30px !important;
+    }
+    .banner-img{
+        margin-bottom: 30px !important;
+    }
+    .typical{
+        font-size: 18px !important;
+        margin-top: 30px !important;
     }
 }

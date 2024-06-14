@@ -327,6 +327,12 @@
     justify-content: center;
     align-items: center;
 }
+.product-type h2{
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #010f1c;
+    margin-left: 100px;
+}
 .detail-info button{
     margin-top: 30px;
     padding: 15px 40px ;
@@ -370,4 +376,25 @@
 }
 .click-product  {
     text-decoration: none;
+}
+.view-more{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-decoration: none;    
+}
+.view-more button{
+    background-color: #d8ba6f;
+    padding:15px 40px ;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.view-more button:hover{
+    background-color:#C7AB62 ;
 }

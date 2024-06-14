@@ -72,22 +72,22 @@ const Product = ({ setProduct, Productdetail = [], detail, view, close, setClose
       {close && selectedProduct && (
         <div className='modal'>
           <div className='product-detail'>
-          <div className='detail-container'>
-            <button className='closebtn' onClick={() => setClose(false)}><AiOutlineClose /></button>
-            <div className='productsbox'>
-              <div className='detail detail-info'>
-                <h4 id='cat'>{selectedProduct.Cat}</h4>
-                <h2 id='title'>{selectedProduct.Title}</h2>
-                <p id='slogan'>{selectedProduct.slogan}</p>
-                <h3 id='price'>${selectedProduct.Price}</h3>
-                <div className='detail-info-btn'>
-                  <button className='buynow' onClick={() => addtocart(selectedProduct)}>Buy Now</button>
-                  <button onClick={() => addtocart(selectedProduct)}>Add To Cart</button>
+            <div className='detail-container'>
+              <button className='closebtn' onClick={() => setClose(false)}><AiOutlineClose /></button>
+              <div className='productsbox'>
+                <div className='detail detail-info'>
+                  <h4 id='cat'>{selectedProduct.Cat}</h4>
+                  <h2 id='title'>{selectedProduct.Title}</h2>
+                  <p id='slogan'>{selectedProduct.slogan}</p>
+                  <h3 id='price'>${selectedProduct.Price}</h3>
+                  <div className='detail-info-btn'>
+                    <button className='buynow' onClick={() => addtocart(selectedProduct)}>Buy Now</button>
+                    <button onClick={() => addtocart(selectedProduct)}>Add To Cart</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       )}
       <div className='products'>
@@ -113,22 +113,39 @@ const Product = ({ setProduct, Productdetail = [], detail, view, close, setClose
               </ul>
             </div>
             {/* Products display section */}
-            <div className='productsbox-product'>
+            <div  className='productsbox-product'>
               <div className='productsbox-content'>
                 {filteredProducts.map((curElm) => (
-                  <div className='box-product-container' key={curElm.id}>
+                  <div onClick={() => viewProductDetail(curElm)} className='box-product-container size' key={curElm.id}>
                     <div className='box-productsdetail'>
                       <div className='imgbox-productdetail'>
                         <img src={curElm.Img} alt={curElm.Title}></img>
                       </div>
                       <div className='icon-productsdetail'>
                         {isAuthenticated ? (
-                          <li onClick={() => addtocart(curElm)}><AiOutlineShoppingCart /></li>
+                          <li onClick={(e) => {
+                              e.stopPropagation();
+                              addtocart(curElm);
+                            }}>
+                            <AiOutlineShoppingCart />
+                          </li>
                         ) : (
-                          <li onClick={() => loginWithRedirect()}><AiOutlineShoppingCart /></li>
+                          <li onClick={(e) => {
+                              e.stopPropagation();
+                              loginWithRedirect();
+                            }}>
+                            <AiOutlineShoppingCart />
+                          </li>
                         )}
-                        <li onClick={() => viewProductDetail(curElm)}><BsEye /></li>
-                        <li><AiOutlineHeart /></li>
+                        <li onClick={(e) => {
+                            e.stopPropagation();
+                            viewProductDetail(curElm);
+                          }}>
+                          <BsEye />
+                        </li>
+                        <li onClick={(e) => e.stopPropagation()}>
+                          <AiOutlineHeart />
+                        </li>
                       </div>
                       <div className='detail-productsdetail'>
                         <p>{curElm.Cat}</p>
